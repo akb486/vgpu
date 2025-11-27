@@ -1,4 +1,4 @@
-# vgpu
+# vgpu 30 40 50 coming soon
 ==============NVSMI LOG==============
 
 
