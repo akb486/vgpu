@@ -27,7 +27,6 @@ GPU 00000000:01:00.0
     GPU Operation Mode
         Current                           : N/A
         Pending                           : N/A
-    GSP Firmware Version                  : N/A
     GPU Virtualization Mode
         Virtualization Mode               : Host VGPU
         Host VGPU Mode                    : Non SR-IOV
