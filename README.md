@@ -39,6 +39,8 @@ Thu Nov 2 21:43:18 2025
 |=================================+==============================+============|
 |   0  NVIDIA GeForce RTX 408...  | 00000000:01:00.0             |   0%       |
 +---------------------------------+------------------------------+------------+
+```
+```
 mdevctl types
 0000:01:00.0
   nvidia-522
@@ -186,7 +188,8 @@ mdevctl types
     Device API: vfio-pci
     Name: NVIDIA RTXA6000-48C
     Description: num_heads=1, frl_config=60, framebuffer=49152M, max_resolution=4096x2400, max_instance=1
-
+```
+```
 ○ nvidia-vgpud.service - NVIDIA vGPU Daemon
      Loaded: loaded (/lib/systemd/system/nvidia-vgpud.service; enabled; preset: enabled)
     Drop-In: /etc/systemd/system/nvidia-vgpud.service.d
@@ -208,7 +211,8 @@ Nov 2 21:40:41 pve nvidia-vgpud[965]: PID file unlocked.
 Nov 2 21:40:41 pve nvidia-vgpud[965]: PID file closed.
 Nov 2 21:40:41 pve nvidia-vgpud[965]: Shutdown (965)
 Nov 2 21:40:41 pve systemd[1]: nvidia-vgpud.service: Deactivated successfully.
-
+```
+```
 ● nvidia-vgpu-mgr.service - NVIDIA vGPU Manager Daemon
      Loaded: loaded (/lib/systemd/system/nvidia-vgpu-mgr.service; enabled; preset: enabled)
     Drop-In: /etc/systemd/system/nvidia-vgpu-mgr.service.d
@@ -225,7 +229,9 @@ Nov 2 21:40:41 pve systemd[1]: nvidia-vgpud.service: Deactivated successfully.
 Nov 2 21:40:40 pve systemd[1]: Starting nvidia-vgpu-mgr.service - NVIDIA vGPU Manager Daemon...
 Nov 2 21:40:40 pve systemd[1]: Started nvidia-vgpu-mgr.service - NVIDIA vGPU Manager Daemon.
 Nov 2 21:40:41 pve nvidia-vgpu-mgr[964]: notice: vmiop_env_log: nvidia-vgpu-mgr daemon started
-
+```
+```
+dmesg
 [    4.275380] nvidia: module verification failed: signature and/or required key missing - tainting kernel
 [    4.334737] nvidia-nvlink: Nvlink Core is being initialized, major device number 509
 [    4.335546] nvidia 0000:01:00.0: vgaarb: changed VGA decodes: olddecodes=io+mem,decodes=none:owns=none
@@ -234,7 +240,8 @@ Nov 2 21:40:41 pve nvidia-vgpu-mgr[964]: notice: vmiop_env_log: nvidia-vgpu-mgr 
 [    5.670781] nvidia 0000:01:00.0: MDEV: Registered
 [   73.932855] nvidia-vgpu-vfio 00000000-0000-0000-0000-000000000101: Adding to iommu group 19
 [   74.387912] [nvidia-vgpu-vfio] 00000000-0000-0000-0000-000000000101: vGPU migration enabled with upstream V2 migration protocol
-
+```
+```
 nvidia-smi
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 525.147.01   Driver Version: 525.147.01   CUDA Version: N/A      |
@@ -255,7 +262,8 @@ nvidia-smi
 |=============================================================================|
 |    0   N/A  N/A      1583    C+G   vgpu                             2036MiB |
 +-----------------------------------------------------------------------------+
-
+```
+```
 nvidia-smi vgpu
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 525.147.01             Driver Version: 525.147.01                |
@@ -266,7 +274,7 @@ nvidia-smi vgpu
 |   0  NVIDIA GeForce RTX 407...  | 00000000:01:00.0             |   0%       |
 |      3251634190  NVIDIA RTXA... | f267...  win10test,debug-... |      0%    |
 +---------------------------------+------------------------------+------------+
-
+```
 nvidia-smi vgpu -q
 GPU 00000000:01:00.0
     Active vGPUs                          : 1
