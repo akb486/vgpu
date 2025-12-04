@@ -1,5 +1,6 @@
 # vgpu 30 40 50 coming soon
 ```
+nvidia-smi -q
 ==============NVSMI LOG==============
 
 Timestamp                                 : Thu Nov 2 21:43:18 2025
@@ -271,7 +272,7 @@ nvidia-smi vgpu
 | GPU  Name                       | Bus-Id                       | GPU-Util   |
 |      vGPU ID     Name           | VM ID     VM Name            | vGPU-Util  |
 |=================================+==============================+============|
-|   0  NVIDIA GeForce RTX 407...  | 00000000:01:00.0             |   0%       |
+|   0  NVIDIA GeForce RTX 408...  | 00000000:01:00.0             |   0%       |
 |      3251634190  NVIDIA RTXA... | f267...  win10test,debug-... |      0%    |
 +---------------------------------+------------------------------+------------+
 ```
